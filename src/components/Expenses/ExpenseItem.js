@@ -5,8 +5,9 @@ import './ExpenseItem.css'
 
 const ExpenseItem = (props) => {
     const [title, setTitle] = useState(props.title)
+
     const handleChangeTitle = () => {
-        setTitle('update!')
+        setTitle('Update!')
     }
     return (
         <Card className='expense-item'>

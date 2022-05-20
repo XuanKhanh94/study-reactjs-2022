@@ -1,6 +1,8 @@
+import ExpensesFilter from "./components/Expenses/ExpensesFilter";
 import Expenses from "./components/Expenses/Expenses"
+import NewExpense from "./components/NewExpense/NewExpense";
 
-const App = () => {
+const App = (props) => {
   const expenses = [
     {
       id: 1,
@@ -33,8 +35,16 @@ const App = () => {
       date: new Date(2021, 2, 4)
     },
   ]
+
+  const addExpenseDataHandler = (expense) => {
+    console.log(expense);
+  }
+
+
+
   return (
     <div className="App">
+      <NewExpense onAddExpense={addExpenseDataHandler} />
       <Expenses items={expenses} />
     </div>
   );
